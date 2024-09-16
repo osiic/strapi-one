@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "chapters",
+  "info": {
+    "singularName": "chapter",
+    "pluralName": "chapters",
+    "displayName": "Chapter"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "audio": {
+      "type": "string"
+    },
+    "audio_file": {
+      "type": "string"
+    },
+    "audiobook": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::audiobook.audiobook",
+      "inversedBy": "chapters"
+    },
+    "ch": {
+      "type": "biginteger"
+    },
+    "posted": {
+      "type": "datetime"
+    },
+    "script": {
+      "type": "richtext"
+    },
+    "chapter": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "chapter"
+    }
+  }
+}
